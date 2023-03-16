@@ -40,9 +40,7 @@ function calculate(){
 
 
 document.getElementById("copyToClipboard").addEventListener('click',function(){
-  alert('VIU QUE DEU CERTO NÉEEE, AGORA O COMBINADO... ☺️☺️☺️')
-  alert('TE AMO MUITO ❤️❤️')
-  alert('AGORA DEIXA EU VER MEUS AMIGOS vaii 🙃🙃')
+  //////
 })
 
 
