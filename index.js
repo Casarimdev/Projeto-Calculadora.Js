@@ -43,7 +43,17 @@ document.getElementById("copyToClipboard").addEventListener('click',function(){
   //////
 })
 
-
+document.getElementById("copyToClipboard").addEventListener("click", function (ev) {
+  const button = ev.currentTarget
+  if (button.innerText === "Copy") {
+    button.innerText = "Copied!"
+    button.classList.add("success")
+    navigator.clipboard.writeText(resultInput.value)
+  } else {
+    button.innerText = "Copy"
+    button.classList.remove("success")
+  }
+})
 
 
 document.getElementById("themeSwitcher").addEventListener("click", function () {
@@ -56,7 +66,7 @@ document.getElementById("themeSwitcher").addEventListener("click", function () {
   } else {
     root.style.setProperty("--bg-color", "#212529")
     root.style.setProperty("--border-color", "#000")
-    root.style.setProperty("--font-color", "#000")
+    root.style.setProperty("--font-color", "#f1f5f9")
     root.style.setProperty("--primary-color", "#0c06b8")
     main.dataset.theme = "dark"
   }
